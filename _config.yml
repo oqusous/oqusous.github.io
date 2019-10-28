@@ -1,0 +1,2 @@
+baseurl: /tree/gh-pages
+exclude: ['README.md']
