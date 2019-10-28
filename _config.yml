@@ -1,2 +1,3 @@
 baseurl: /tree/gh-pages
 exclude: ['README.md']
+theme: jekyll-theme-midnight
