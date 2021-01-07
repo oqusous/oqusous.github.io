@@ -30,20 +30,19 @@ layout: default
     
     <li> <a href="https://github.com/oqusous/COVID19_pmc_LDA"title="COVID19_pmc_LDA"><h3> Topic Modelling using Latent Derelict Allocation (LDA) for PubMed Central (pmc) Papers Related to COVID-19 and Other Corona Viruses | NLP LDA </h3></a>
       <p>
-        The CORD-19 dataset <a href = "https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge"title="CORD-19-research-challenge"> CORD 19 research challenge</a> containts a large collection of literature on coronaviruses that are 
+        The <a href = "https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge"title="CORD-19-research-challenge"> CORD 19 research challenge</a> dataset containts a large collection of literature on coronaviruses that are 
         made avilable for data mining. Part of the data is 85,000+ PMC papers- the project aims to classify the papers according to their topics in alignment with WHO's 
         Research and Development Blueprint <a href = "https://www.who.int/blueprint/priority-diseases/key-action/Global_Research_Forum_FINAL_VERSION_for_web_14_feb_2020.pdf?ua=1"title="Global_Research_Forum_FINAL_VERSION_for_web_14_feb_2020.pdf"> COVID 19 Public Health Emergency of International Concern (PHEIC)</a>
         research topics to tackle the spread of COVID-19. LDA is applied using Genisim's core estimation which is based on the onlineldavb.py script, 
-        by Hoffman, Blei, Bach: Online Learning for Latent Dirichlet Allocation[2] and estimation using an (optimized version of) collapsed gibbs sampling from MALLET.
+        by Hoffman, Blei, Bach: Online Learning for Latent Dirichlet Allocation and an estimation using an (optimized version of) collapsed gibbs sampling from <a href="http://mallet.cs.umass.edu/"title="MALLET.cs.umass.edu">MALLET </a> to model the topics and compare their preformance.
       </p>
     </li>
     
     <li> <a href="https://github.com/oqusous/nasdaq"title="NASDAQ Stock Market Index Modelling"><h3> NASDAQ Stock Market Index Modelling | Time Series Analysis</h3></a>
       <p>
         The project aims to build Univariate models to forecast NASDAQ stock index’s price using Python programming language. The data and its source 
-        are first introduced and the need for such tool is explored. The data is then processed in order to keep 5500 datapoints, converted to the appropriate 
-        data types, the target variable is set as the close stock price and then split into 1:5 testing to training datapoints. The data is then is made stationary 
-        by differencing the log of the data. Through time decomposition, it is determined that the data has a strong trend and weak seasonality.
+        are first introduced and the need for such tool is explored. The target variable is set as the close stock price. The data is then is made stationary 
+        by differencing the log of the close stock price. Through time decomposition, it is determined that the data has a strong trend and weak seasonality.
         The data is then modeled using Average, Naïve, Simple Exponential Smoothening, Holt’s linear, Holt-Winter Seasonal, ARMA and ARIMA methods. At the end of 
         experimenting with each model, the best one-step forecast is determined to be Holt Linear method and the best h-step predictor is ARIMA with order (3,1,4).
       </p>
