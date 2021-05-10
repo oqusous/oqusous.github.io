@@ -1,140 +1,224 @@
----
-layout: default
----
-<head>
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title> Omar Qusous &mdash; Data Scientist </title>
+    <meta property="og:title" content=" Omar Qusous &mdash; Data Scientist " />
+    <meta name="twitter:title" content=" Omar Qusous &mdash; Data Scientist " />
+
+    <meta name="description" content="">
+    <meta name="description" property="og:description" content="" />
+    <meta name="twitter:description" content="" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <meta name="twitter:site" content="@your_handler" />
+    
+    <meta property="og:url" content="http://localhost:4000/" />
+
+    <meta property="og:image" content="" />
+    <meta name="twitter:image" content="" />
+
+    <meta name="author" content="Omar Qusous" />
+
+    <meta name="copyright" content="Copyright by Omar Qusous. All Rights Reserved." />
+
+    <style>
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 300;
+            src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v15/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 900;
+            src: local('Roboto Black'), local('Roboto-Black'), url(https://fonts.gstatic.com/s/roboto/v15/mnpfi9pxYH-Go5UiibESIltXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: italic;
+            font-weight: 300;
+            src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url(https://fonts.gstatic.com/s/roboto/v15/7m8l7TlFO-S3VkhHuR0at44P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: italic;
+            font-weight: 400;
+            src: local('Roboto Italic'), local('Roboto-Italic'), url(https://fonts.gstatic.com/s/roboto/v15/vPcynSL0qHq_6dX7lKVByfesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: italic;
+            font-weight: 700;
+            src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url(https://fonts.gstatic.com/s/roboto/v15/t6Nd4cfPRhZP44Q5QAjcC44P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: italic;
+            font-weight: 900;
+            src: local('Roboto Black Italic'), local('Roboto-BlackItalic'), url(https://fonts.gstatic.com/s/roboto/v15/bmC0pGMXrhphrZJmniIZpY4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+        }
+    </style>
+    
+    <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+    <link rel="canonical" href="http://localhost:4000/">
+
+    <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
 </head>
-  
-<body>
-  <h1>Data Science Portfolio |</h1>
-  
-  <h1>Omar Qusous
-        <a href="https://www.linkedin.com/in/omarq19" title="linkedin">
-        <img border="0" alt="linkedin" src="image/linkedin-3-256.png" width="25" height="25"></a>
-        <a href="https://github.com/oqusous" title="GitHub">
-        <img border="0" alt="github" src="image/342-3420303_github-logo-png.png" width="25" height="25"></a>
-        <a href="https://medium.com/@oguss" title="medium">
-        <img border="0" alt="medium" src="image/med11.png" width="30" height="25"></a>
-  </h1>
-  
-  <br></br>
-  
 
-  <h2> Recommender Systems </h2>
-  <ul>
+    <body>
+        <div class="wrapper">
+            <aside class="user-profile fixed" role="complementary">
+    <div class="burger">
+        <input class="trigger hidden" id="toggleBurger" type="checkbox" />
+        <label for="toggleBurger">
+            <span>Navigation</span>
+        </label>
+    </div>
 
-    <li> <a href="https://github.com/oqusous/car_recommendation_"title="Car Recommender"><h3> Car Recommender </h3></a>
-      <p>
-        Developed a content-based “comparison shopping tool” car recommender using an approximate nearest neighbor algorithm. It is a tool to make 
-        car hunting less of daunting endeavor for users. The shopper enters their favorite or budgeted-for car brand and model and the recommender 
-        will provide cars with similar characteristics such as fuel economy, performance, cost and size.<br>
+    <div class="compact-header">
+        <a class="avatar" href="http://localhost:4000"><img alt="Avatar" src="./images/OmarQusous627711.jpg" /></a>
+        <div class="my-info">
+            <strong class="my-name">Omar Qusous</strong>
+            <span class="my-job-title">Data Scientist</span>
+        </div>
+    </div>
+
+    
         
-        Try it out for yourself by clicking on this link: <a href="https://share.streamlit.io/oqusous/car_recommendation_/car_rec_streamlite.py"title="Car Recommender StreamLit App"> Car Recommender StreamLit App</a>
-       
-      </p>
-    </li>
-  </ul>
-
-  <h2> Natural Language Inferencing/Processing </h2>
-  <ul>
-
-    <li> <a href="https://github.com/oqusous/COVID19_pmc_LDA"title="COVID19_pmc_LDA"><h3> Topic Modelling using Latent Derelict Allocation (LDA) for PubMed Central (pmc) Papers Related to COVID-19 and Other Corona Viruses </h3></a>
-      <p>
-        The <a href = "https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge"title="CORD-19-research-challenge"> CORD 19 research challenge</a> dataset contains a large collection of literature on coronaviruses that are 
-        made avilable for data mining. Part of the data is 85,000+ PMC papers- the project aims to classify the papers according to their topics in alignment with WHO's 
-        Research and Development Blueprint <a href = "https://www.who.int/blueprint/priority-diseases/key-action/Global_Research_Forum_FINAL_VERSION_for_web_14_feb_2020.pdf?ua=1"title="Global_Research_Forum_FINAL_VERSION_for_web_14_feb_2020.pdf"> COVID 19 Public Health Emergency of International Concern (PHEIC)</a>
-        research topics to tackle the spread of COVID-19. LDA is applied using Genisim's core estimation which is based on the onlineldavb.py script, 
-        by Hoffman, Blei, Bach: Online Learning for Latent Dirichlet Allocation and an estimation using an (optimized version of) collapsed Gibbs sampling from <a href="http://mallet.cs.umass.edu/"title="MALLET.cs.umass.edu">MALLET </a> to model the topics and compare their performance.
-      </p>
-    </li>
-  
-    <li><a href="https://github.com/oqusous/bert_question_answer_NLI" title="BERT Q&A Classification"><h3> BERT Question-Answer </h3></a>
-      <p>
-        Google's BERT pre-trained model is recognized for being one of the most powerful tools used for NLP. One incredibly useful task it can be fine-tuned to do is to 
-        classify whether a pair of passages have a high lexical overlap or not. This could be used in applications where a question-answering platform, such as stack-overflow, 
-        wishes to use machine learning to determine if the answers given to a question contain relevant context to answer it.
-        In this project I used <a href = "https://www.tensorflow.org/tutorials/text/solve_glue_tasks_using_bert_on_tpu" title= "solve_glue_tasks_using_bert_on_tpu">Tensorflow tutorial</a>
-        and adapted it to carry out the classification task on <a href = "https://microsoft.github.io/msmarco/#qna" title="MS MACRO question answering dataset">MS MACRO question answering dataset</a>
-      </p>
-    </li> 
+      
     
-    <li><a href="https://github.com/oqusous/fakenews_text_classification" title="fakenews_text_classification"><h3> Fake News Classifier </h3></a>
-      <p>
-       The aim of this project is to Try different classification models on the  provided by <a href = "https://www.kaggle.com/c/fake-news/" title= "fake-news">fake news dataset</a>s kaggle.
-       These models can be used on various datasets for the same purpose. I have tried those same models on various similar datasets and have always scored high in terms of accuracy.
-       The models that were used are:
-       1. Neural Network model with Bi-directional recurrent LSTM cell layer. Stanford's Glove-300d embeddings were used in the input layer.
-       2. Neural Network model with convolutional, max-pooling and recurrent/LSTM-cell layers. Stanford's Glove-300d embeddings were used in the input layer.
-       3. Pre-trained NNLM 128 Model (https://tfhub.dev/google/nnlm-en-dim128/2) embedding layer with dense classifier layer.
-       4. Naive Bayes.
-      </p>
-    </li>
+
+    <p class="about-me"></p>
+
+    <ul class="socials">
+        <li><a href="https://www.linkedin.com/in/omarq19/"><svg title="linkedin" width="16" height="16" ><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:4000/assets/svg/social-icons.svg#linkedin-icon"></use></svg></a></li>
+        <li><a href="https://github.com/oqusous"><svg title="github" width="16" height="16" ><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:4000/assets/svg/social-icons.svg#github-icon"></use></svg></a></li>
+        <li><a href="https://medium.com/@oguss"><svg title="medium" width="16" height="16" ><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://localhost:4000/assets/svg/social-icons.svg#medium-icon"></use></svg></a></li>
+    </ul>
+</aside>
+
+            <main class="the-content" role="main">
+
+                
+<article class="post" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header"><h2>Recommender Systems</h2>
+    </header>
+
+    <div class="post-content">
+    <a href="https://github.com/oqusous/car_recommendation_"><h3>Car Recommender</h3></a> 
+    <p>Developed a content-based “comparison shopping tool” car recommender using an approximate nearest neighbor algorithm. It is a tool to make car hunting less of daunting endeavor for users. The shopper enters their favorite or budgeted-for car brand and model and the recommender will provide cars with similar characteristics such as fuel economy, performance, cost and size. Try it out for yourself by clicking on this link: <a href="https://share.streamlit.io/oqusous/car_recommendation_/car_rec_streamlite.py"title="Car Recommender StreamLit App"> Car Recommender StreamLit App</a></p>
+
+    </div>
+</article>
+
+<article class="post" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header"><h2>Natural Language Inferencing/Processing</h2>
+    </header>
+
+    <div class="post-content">
+    <a href="https://github.com/oqusous/COVID19_pmc_LDA"><h3>Topic Modelling using Latent Derelict Allocation (LDA) for PubMed Central (pmc) Papers Related to COVID-19 and Other Corona Viruses</h3></a> 
+    <p>The <a href = "https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge"title="CORD-19-research-challenge"> CORD 19 research challenge</a> dataset contains a large collection of literature on coronaviruses that are made avilable for data mining. Part of the data is 85,000+ PMC papers- the project aims to classify the papers according to their topics in alignment with WHO's Research and Development Blueprint <a href = "https://www.who.int/blueprint/priority-diseases/key-action/Global_Research_Forum_FINAL_VERSION_for_web_14_feb_2020.pdf?ua=1"title="Global_Research_Forum_FINAL_VERSION_for_web_14_feb_2020.pdf"> COVID 19 Public Health Emergency of International Concern (PHEIC)</a> research topics to tackle the spread of COVID-19. LDA is applied using Genisim's core estimation which is based on the onlineldavb.py script, by Hoffman, Blei, Bach: Online Learning for Latent Dirichlet Allocation and an estimation using an (optimized version of) collapsed Gibbs sampling from <a href="http://mallet.cs.umass.edu/"title="MALLET.cs.umass.edu">MALLET </a> to model the topics and compare their performance. </p>
+
+    <a href="https://github.com/oqusous/bert_question_answer_NLI"><h3> BERT Question-Answer</h3></a> 
+    <p> Google's BERT pre-trained model is recognized for being one of the most powerful tools used for NLP. One incredibly useful task it can be fine-tuned to do is to classify whether a pair of passages have a high lexical overlap or not. This could be used in applications where a question-answering platform, such as stack-overflow, wishes to use machine learning to determine if the answers given to a question contain relevant context to answer it. In this project I used <a href = "https://www.tensorflow.org/tutorials/text/solve_glue_tasks_using_bert_on_tpu" title= "solve_glue_tasks_using_bert_on_tpu">Tensorflow tutorial</a> and adapted it to carry out the classification task on <a href = "https://microsoft.github.io/msmarco/#qna" title="MS MACRO question answering dataset">MS MACRO question answering dataset</a></p>
+
+    <a href="https://github.com/oqusous/fakenews_text_classification"><h3> Fake News Classifier</h3></a> 
+    <p> The aim of this project is to Try different classification models on the  provided by <a href = "https://www.kaggle.com/c/fake-news/" title= "fake-news">fake news dataset</a>s kaggle. These models can be used on various datasets for the same purpose. I have tried those same models on various similar datasets and have always scored high in terms of accuracy. The models that were used are: 1. Neural Network model with Bi-directional recurrent LSTM cell layer. Stanford's Glove-300d embeddings were used in the input layer. 2. Neural Network model with convolutional, max-pooling and recurrent/LSTM-cell layers. Stanford's Glove-300d embeddings were used in the input layer. 3. Pre-trained NNLM 128 Model (https://tfhub.dev/google/nnlm-en-dim128/2) embedding layer with dense classifier layer. 4. Naive Bayes.</p>
+
+    <a href="https://github.com/oqusous/Movie-scripts-classifier"><h3> Movie Script Classifier </h3></a> 
+    <p> The classifier determines what genre a movie is based on its script. Web-scraped scripts of movies from 3 different genres- Romance, Horror and Fantasy. These were chosen because it was deemed they would have the least overlap. Using Multinomial Naive Bayes model, accuracy acheived was 32% above the baseline model.</p>
     
-    <li><a href="https://github.com/oqusous/Movie-scripts-classifier" title="Movie Script Classifier"><h3> Movie Script Classifier </h3></a>
-      <p>
-        The classifier determines what genre a movie is based on its script. Web-scraped scripts of movies from 3 different genres.
-        * Romance
-        * Horror
-        * Fantasy 
-        These were chosen because it was deemed they would have the least overlap.
-        Using Multinomial Naive Bayes model, accuracy acheived was 32% above the baseline model.
-      </p>
-    </li>    
-  </ul>
+    </div>
+</article>
 
-  <h2> Computer Vision </h2>
-  <ul>
-    <li><a href="https://github.com/oqusous/CNN_leukemia" title="CNN_leukemia"><h3> Detecting leukemic B-lymphoblast cells (cancer cells) from normal B-lymphoid precursors (normal cells) from blood smear microscopic images </h3></a>
-      <p>
-        This project aims to assess the accuracy of a built-from-scratch CNN model and a ResNet50 pre-trained transfer learning CNN model in distinguishing leukemic B-lymphoblast 
-        cells from healthy B-lymphoid precursors. The images are microscopic images of blood smear samples for patients who are healthy and others who have been diagnosed with 
-        Leukemia.
-      </p>
-    </li>
- 
-    <li><a href="https://github.com/oqusous/TensorFlow-cnn-analyzing-visual-imagery-dogs-vs-cars" title="dogs_v_cars"><h3>TensorFlow’s Convolutional Neural Network: Analyzing Visual Imagery Dogs vs Cars | CNN</h3></a>
-      <p>
-         CNN model to recognize images for either being that of dogs or cars.
-      </p>
-    </li>
-  </ul> 
-   
-  <h2> Time Series Analysis </h2>
-  <ul>    
-    <li> <a href="https://github.com/oqusous/nasdaq"title="NASDAQ Stock Market Index Modelling"><h3> NASDAQ Stock Market Index Modelling </h3></a>
-      <p>
-        The project aims to build Univariate models to forecast NASDAQ stock index’s price using Python programming language. The data and its source 
-        are first introduced and the need for such tool is explored. The target variable is set as the close stock price. The data is then is made stationary 
-        by differencing the log of the close stock price. Through time decomposition, it is determined that the data has a strong trend and weak seasonality.
-        The data is then modeled using Average, Naïve, Simple Exponential Smoothening, Holt’s linear, Holt-Winter Seasonal, ARMA and ARIMA methods. At the end of 
-        experimenting with each model, the best one-step forecast is determined to be Holt Linear method and the best h-step predictor is ARIMA with order (3,1,4).
-      </p>
-    </li>
-  </ul>
-  
-  <h2> Shallow Learning Regression and Classification Models </h2>
-  <ul>
-    <li> <a href="https://github.com/oqusous/Kickstarter_project" title="Kick Starter Project Predictor"> <h3> Kickstarter Project Success Predictor | Classification</h3></a>
-      <p>
-        Created an ensemble decision tree classification algorithm that helps entrepreneurs seeking funds from crowdfunding website to predict whether their project will 
-        succeed or fail on Kickstarter. The users enter the project’s category (Film, Music, Fashion etc..), country where project is based in, 
-        dates of creation and deadline and the budget desired. I am currently in the process of apply the similar algorithm to gofundme.com and indiegogo.com 
-        order to create a comparison tool that helps users pick the right website for their project.
-      </p>
-    </li>
-  
-    <li><a href="https://github.com/oqusous/Used_Car_Linear_Regression_Prediction" title="Used car price predictor"> <h3>Used car price predictor | Linear Regression</h3></a>
-      <p>
-        Predicts price of used cars for 43 brands for models between 2014-2018 using linear regression.
-      </p>
-    </li>
-  </ul>
+<article class="post" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header"><h2>Computer Vision</h2>
+    </header>
 
-<br></br>
+    <div class="post-content">
+    <a href="https://github.com/oqusous/CNN_leukemia"><h3>Detecting leukemic B-lymphoblast cells (cancer cells) from normal B-lymphoid precursors (normal cells) from blood smear microscopic images</h3></a> 
+    <p> This project aims to assess the accuracy of a built-from-scratch CNN model and a ResNet50 pre-trained transfer learning CNN model in distinguishing leukemic B-lymphoblast cells from healthy B-lymphoid precursors. The images are microscopic images of blood smear samples for patients who are healthy and others who have been diagnosed with Leukemia.</p>
 
-<footer>
-  <p>
-    oqusous.github.io
-  </p>
-</footer>
-</body>
+    <a href="https://github.com/oqusous/TensorFlow-cnn-analyzing-visual-imagery-dogs-vs-cars"><h3> Analyzing Visual Imagery Dogs vs Cars </h3></a> 
+    <p> CNN model to recognize images for either being that of dogs or cars.</a></p>
+
+    </div>
+</article>
+
+<article class="post" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header"><h2>Time Series Analysis</h2>
+    </header>
+
+    <div class="post-content">
+    <a href="https://github.com/oqusous/nasdaq"><h3> NASDAQ Stock Market Index Forecast </h3></a> 
+    <p> The project aims to build Univariate models to forecast NASDAQ stock index’s price using Python programming language. The data and its source are first introduced and the need for such tool is explored. The target variable is set as the close stock price. The data is then is made stationary by differencing the log of the close stock price. Through time decomposition, it is determined that the data has a strong trend and weak seasonality. The data is then modeled using Average, Naïve, Simple Exponential Smoothening, Holt’s linear, Holt-Winter Seasonal, ARMA and ARIMA methods. At the end of experimenting with each model, the best one-step forecast is determined to be Holt Linear method and the best h-step predictor is ARIMA with order (3,1,4).</p>
+    </div>
+</article>
+
+<article class="post" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header"><h2>Other Shallow Learning Regression and Classification Projects</h2>
+    </header>
+
+    <div class="post-content">
+    <a href="https://github.com/oqusous/Kickstarter_project"><h3> Kickstarter Project Success Predictor | Classification </h3></a> 
+    <p> Created an ensemble decision tree classification algorithm that helps entrepreneurs seeking funds from crowdfunding website to predict whether their project will succeed or fail on Kickstarter. The users enter the project’s category (Film, Music, Fashion etc..), country where project is based in, dates of creation and deadline and the budget desired. I am currently in the process of apply the similar algorithm to gofundme.com and indiegogo.com order to create a comparison tool that helps users pick the right website for their project.</p>
+    
+    <div class="post-content">
+    <a href="https://github.com/oqusous/Used_Car_Linear_Regression_Prediction"><h3> Used car price predictor | Linear Regression </h3></a> 
+    <p> Predicts price of used cars for 43 brands for models between 2014-2018 using linear regression.</p>
+    </div>
+</article>
+
+
+
+
+            </main>
+        </div>
+
+        <script src="http://localhost:4000/assets/js/jquery-1.12.2.min.js"></script>
+<script src="http://localhost:4000/assets/js/backtotop.js"></script>
+<script src="http://localhost:4000/assets/js/lunr.min.js"></script>
+<script src="http://localhost:4000/assets/js/lunr-feed.js"></script>
+<script src="http://localhost:4000/assets/js/jquery.fitvids.js"></script>
+<script src="http://localhost:4000/assets/js/svg4everybody.min.js"></script>
+<script src="http://localhost:4000/assets/js/scripts.js"></script>
+
+
+    </body>
+</html>
