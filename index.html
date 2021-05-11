@@ -1,62 +1,140 @@
 ---
 layout: default
 ---
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
+</head>
+  
+<body>
+  <h1>Data Science Portfolio |</h1>
+  
+  <h1>Omar Qusous
+        <a href="https://www.linkedin.com/in/omarq19" title="linkedin">
+        <img border="0" alt="linkedin" src="image/linkedin-3-256.png" width="25" height="25"></a>
+        <a href="https://github.com/oqusous" title="GitHub">
+        <img border="0" alt="github" src="image/342-3420303_github-logo-png.png" width="25" height="25"></a>
+        <a href="https://medium.com/@oguss" title="medium">
+        <img border="0" alt="medium" src="image/med11.png" width="30" height="25"></a>
+  </h1>
+  
+  <br></br>
+  
 
-{% for post in paginator.posts %}
-<article class="post" role="article" itemscope itemtype="http://schema.org/BlogPosting">
-    <header class="post-header">
-        <ul>
-            <li><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%-d %b, %Y" }}</time></li>
-            {% if site.show_categories == 1 and post.category %}
-                <li class="cats">
-                    {% for category in post.category %}
-                        <a href="{{site.baseurl}}/{{site.category_dir}}/{{category}}/">{{ category }}</a>
-                    {% endfor %}
-                </li>
-            {% endif %}
-        </ul>
-        <h2 itemprop="name headline"><a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a></h2>
-    </header>
+  <h2> Recommender Systems </h2>
+  <ul>
 
-    <div class="post-content">
-        {{ post.excerpt }}
+    <li> <a href="https://github.com/oqusous/car_recommendation_"title="Car Recommender"><h3> Car Recommender </h3></a>
+      <p>
+        Developed a content-based “comparison shopping tool” car recommender using an approximate nearest neighbor algorithm. It is a tool to make 
+        car hunting less of daunting endeavor for users. The shopper enters their favorite or budgeted-for car brand and model and the recommender 
+        will provide cars with similar characteristics such as fuel economy, performance, cost and size.<br>
+        
+        Try it out for yourself by clicking on this link: <a href="https://share.streamlit.io/oqusous/car_recommendation_/car_rec_streamlite.py"title="Car Recommender StreamLit App"> Car Recommender StreamLit App</a>
+       
+      </p>
+    </li>
+  </ul>
 
-        {% if post.excerpt != post.content %}
-            <p><a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" role="button">Read More</a></p>
-        {% endif %}
-    </div>
+  <h2> Natural Language Inferencing/Processing </h2>
+  <ul>
 
-    <footer class="post-footer">
-        <div class="share">Share
-            <ul class="social-networks">
-                <li class="share-facebook"><a href="https://www.facebook.com/sharer.php?s=100&p[title]={{post.title | strip_html }}&p[summary]={{post.excerpt | strip_html | truncate: 140 }}&p[url]={{ post.url | prepend: site.baseurl | prepend: site.url }}" class="s_facebook" target="_blank" onclick="window.open(this.href, '','width=700,height=300');return false;"><svg title="" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl | prepend: site.url }}/assets/svg/social-icons.svg#facebook-icon"></use></svg></a></a></li>
-                <li class="share-twitter"><a href="http://twitter.com/share?url={{post.url | prepend: site.url | escape}}&text={{ post.excerpt | strip_html | truncate: 140 }}&hashtags={% for tag in post.tags %}{{ tag }},{% endfor %}" rel="noreferrer" target="_blank" onclick="window.open(this.href, '','width=700,height=300');return false;"><svg title="" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl | prepend: site.url }}/assets/svg/social-icons.svg#twitter-icon"></use></svg></a></li>
-            </ul>
-        </div>
-        {% if site.show_tags == 1 and post.tags %}
-        <div class="tags">
-            <ul>
-                {% for tag in post.tags %}
-                <li><a href="{{ site.baseurl | prepend: site.url }}/tag/{{ tag }}">{{ tag }}</a></li>
-                {% endfor %}
-            </ul>
-        </div>
-        {% endif %}
-    </footer>
-</article>
-{% endfor %}
+    <li> <a href="https://github.com/oqusous/COVID19_pmc_LDA"title="COVID19_pmc_LDA"><h3> Topic Modelling using Latent Derelict Allocation (LDA) for PubMed Central (pmc) Papers Related to COVID-19 and Other Corona Viruses </h3></a>
+      <p>
+        The <a href = "https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge"title="CORD-19-research-challenge"> CORD 19 research challenge</a> dataset contains a large collection of literature on coronaviruses that are 
+        made avilable for data mining. Part of the data is 85,000+ PMC papers- the project aims to classify the papers according to their topics in alignment with WHO's 
+        Research and Development Blueprint <a href = "https://www.who.int/blueprint/priority-diseases/key-action/Global_Research_Forum_FINAL_VERSION_for_web_14_feb_2020.pdf?ua=1"title="Global_Research_Forum_FINAL_VERSION_for_web_14_feb_2020.pdf"> COVID 19 Public Health Emergency of International Concern (PHEIC)</a>
+        research topics to tackle the spread of COVID-19. LDA is applied using Genisim's core estimation which is based on the onlineldavb.py script, 
+        by Hoffman, Blei, Bach: Online Learning for Latent Dirichlet Allocation and an estimation using an (optimized version of) collapsed Gibbs sampling from <a href="http://mallet.cs.umass.edu/"title="MALLET.cs.umass.edu">MALLET </a> to model the topics and compare their performance.
+      </p>
+    </li>
+  
+    <li><a href="https://github.com/oqusous/bert_question_answer_NLI" title="BERT Q&A Classification"><h3> BERT Question-Answer </h3></a>
+      <p>
+        Google's BERT pre-trained model is recognized for being one of the most powerful tools used for NLP. One incredibly useful task it can be fine-tuned to do is to 
+        classify whether a pair of passages have a high lexical overlap or not. This could be used in applications where a question-answering platform, such as stack-overflow, 
+        wishes to use machine learning to determine if the answers given to a question contain relevant context to answer it.
+        In this project I used <a href = "https://www.tensorflow.org/tutorials/text/solve_glue_tasks_using_bert_on_tpu" title= "solve_glue_tasks_using_bert_on_tpu">Tensorflow tutorial</a>
+        and adapted it to carry out the classification task on <a href = "https://microsoft.github.io/msmarco/#qna" title="MS MACRO question answering dataset">MS MACRO question answering dataset</a>
+      </p>
+    </li> 
+    
+    <li><a href="https://github.com/oqusous/fakenews_text_classification" title="fakenews_text_classification"><h3> Fake News Classifier </h3></a>
+      <p>
+       The aim of this project is to Try different classification models on the  provided by <a href = "https://www.kaggle.com/c/fake-news/" title= "fake-news">fake news dataset</a>s kaggle.
+       These models can be used on various datasets for the same purpose. I have tried those same models on various similar datasets and have always scored high in terms of accuracy.
+       The models that were used are:
+       1. Neural Network model with Bi-directional recurrent LSTM cell layer. Stanford's Glove-300d embeddings were used in the input layer.
+       2. Neural Network model with convolutional, max-pooling and recurrent/LSTM-cell layers. Stanford's Glove-300d embeddings were used in the input layer.
+       3. Pre-trained NNLM 128 Model (https://tfhub.dev/google/nnlm-en-dim128/2) embedding layer with dense classifier layer.
+       4. Naive Bayes.
+      </p>
+    </li>
+    
+    <li><a href="https://github.com/oqusous/Movie-scripts-classifier" title="Movie Script Classifier"><h3> Movie Script Classifier </h3></a>
+      <p>
+        The classifier determines what genre a movie is based on its script. Web-scraped scripts of movies from 3 different genres.
+        * Romance
+        * Horror
+        * Fantasy 
+        These were chosen because it was deemed they would have the least overlap.
+        Using Multinomial Naive Bayes model, accuracy acheived was 32% above the baseline model.
+      </p>
+    </li>    
+  </ul>
 
-{% if paginator.total_pages > 1 %}
+  <h2> Computer Vision </h2>
+  <ul>
+    <li><a href="https://github.com/oqusous/CNN_leukemia" title="CNN_leukemia"><h3> Detecting leukemic B-lymphoblast cells (cancer cells) from normal B-lymphoid precursors (normal cells) from blood smear microscopic images </h3></a>
+      <p>
+        This project aims to assess the accuracy of a built-from-scratch CNN model and a ResNet50 pre-trained transfer learning CNN model in distinguishing leukemic B-lymphoblast 
+        cells from healthy B-lymphoid precursors. The images are microscopic images of blood smear samples for patients who are healthy and others who have been diagnosed with 
+        Leukemia.
+      </p>
+    </li>
+ 
+    <li><a href="https://github.com/oqusous/TensorFlow-cnn-analyzing-visual-imagery-dogs-vs-cars" title="dogs_v_cars"><h3>TensorFlow’s Convolutional Neural Network: Analyzing Visual Imagery Dogs vs Cars | CNN</h3></a>
+      <p>
+         CNN model to recognize images for either being that of dogs or cars.
+      </p>
+    </li>
+  </ul> 
+   
+  <h2> Time Series Analysis </h2>
+  <ul>    
+    <li> <a href="https://github.com/oqusous/nasdaq"title="NASDAQ Stock Market Index Modelling"><h3> NASDAQ Stock Market Index Modelling </h3></a>
+      <p>
+        The project aims to build Univariate models to forecast NASDAQ stock index’s price using Python programming language. The data and its source 
+        are first introduced and the need for such tool is explored. The target variable is set as the close stock price. The data is then is made stationary 
+        by differencing the log of the close stock price. Through time decomposition, it is determined that the data has a strong trend and weak seasonality.
+        The data is then modeled using Average, Naïve, Simple Exponential Smoothening, Holt’s linear, Holt-Winter Seasonal, ARMA and ARIMA methods. At the end of 
+        experimenting with each model, the best one-step forecast is determined to be Holt Linear method and the best h-step predictor is ARIMA with order (3,1,4).
+      </p>
+    </li>
+  </ul>
+  
+  <h2> Shallow Learning Regression and Classification Models </h2>
+  <ul>
+    <li> <a href="https://github.com/oqusous/Kickstarter_project" title="Kick Starter Project Predictor"> <h3> Kickstarter Project Success Predictor | Classification</h3></a>
+      <p>
+        Created an ensemble decision tree classification algorithm that helps entrepreneurs seeking funds from crowdfunding website to predict whether their project will 
+        succeed or fail on Kickstarter. The users enter the project’s category (Film, Music, Fashion etc..), country where project is based in, 
+        dates of creation and deadline and the budget desired. I am currently in the process of apply the similar algorithm to gofundme.com and indiegogo.com 
+        order to create a comparison tool that helps users pick the right website for their project.
+      </p>
+    </li>
+  
+    <li><a href="https://github.com/oqusous/Used_Car_Linear_Regression_Prediction" title="Used car price predictor"> <h3>Used car price predictor | Linear Regression</h3></a>
+      <p>
+        Predicts price of used cars for 43 brands for models between 2014-2018 using linear regression.
+      </p>
+    </li>
+  </ul>
 
-<div class="pagination{% if paginator.next_page == 2 %} next{% endif %}" role="navigation" aria-label="pagination">
-    {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path }}" class="previous">&larr; Previous</a>
-    {% endif %}
+<br></br>
 
-    <span class="page_number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-
-    {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path }}" class="next">Next &rarr;</a>
-    {% endif %}
-</div>
-{% endif %}
+<footer>
+  <p>
+    oqusous.github.io
+  </p>
+</footer>
+</body>
